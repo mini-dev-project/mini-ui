@@ -1,5 +1,3 @@
-"use client";
-
 import { RadialBar, RadialBarChart, ResponsiveContainer } from "recharts";
 
 export interface PolarChartProps {

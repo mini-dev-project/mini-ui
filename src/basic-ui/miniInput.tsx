@@ -1,5 +1,3 @@
-"use client";
-
 import { motion as fk, HTMLMotionProps } from "framer-motion";
 import {
   mergeVariants,
@@ -60,4 +58,4 @@ export const MiniInput = ({
       />
     </div>
   );
-}
+};

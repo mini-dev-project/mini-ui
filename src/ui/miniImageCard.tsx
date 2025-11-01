@@ -1,5 +1,3 @@
-"use client";
-
 import { ReactNode } from "react";
 import { MiniBox, MiniBoxProps } from "../basic-ui/miniBox";
 import { MiniUiType } from "../miniComponentConfig";
@@ -34,7 +32,7 @@ export const MiniImageInsideCard = ({
       </div>
     </div>
   );
-}
+};
 
 interface MiniImageCard extends MiniBoxProps {
   children?: ReactNode;

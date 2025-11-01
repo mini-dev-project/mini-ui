@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { MiniUiType } from "../../miniComponentConfig";
@@ -85,4 +83,4 @@ export const MiniDropdown = ({
       <MiniSelect isOpen={isOpen} options={options} onSelect={handleSelect} />
     </div>
   );
-}
+};
