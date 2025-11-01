@@ -1,6 +1,6 @@
 {
   "name": "ministudio-ui",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Reusable React components for Mini Studio",
   "type": "module",
   "main": "dist/index.js",
@@ -10,12 +10,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.tsx --dts --format esm,cjs"
+    "build": "tsup src/index.tsx --dts --format esm,cjs && npm run build:css",
+    "build:css": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --minify"
   },
-  "dependencies": {
-    "axios": "^1.12.2",
-    "cookies-next": "^6.1.1"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "framer-motion": ">=11.0.0",
     "lucide-react": ">=0.300.0",
