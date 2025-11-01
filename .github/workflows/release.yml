@@ -4,13 +4,19 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - "README.md"
+    #   - ".github/**"
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 태그 push 위해 필요
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -23,6 +29,14 @@ jobs:
 
       - name: Build package
         run: npm run build
+
+      # ✅ 버전 자동 증가 및 태그 push
+      - name: Bump version automatically
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          npm version patch -m "release: v%s"
+          git push origin main --tags
 
       - name: Publish to npm
         run: npm publish --access public
