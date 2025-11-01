@@ -30,7 +30,7 @@ const uiSizeStyle = {
   [MiniUiSize.NONE]: "",
 };
 
-export default function MiniButton({
+export const MiniButton = ({
   children,
   className = "",
 
@@ -40,7 +40,7 @@ export default function MiniButton({
   uiHover,
   viewport = defaultViewport,
   ...props
-}: ButtonProps) {
+}: ButtonProps) => {
   const animation: Variants = mergeVariants(uiMotion, uiHover);
   const baseStyle = `${uiSizeStyle[uiSize]} ${uiStyle[ui]} font-semibold`;
 

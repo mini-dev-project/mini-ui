@@ -1,9 +1,9 @@
 "use client";
 
 import { ReactNode } from "react";
-import MiniImage, { MiniImageProps } from "../basic-ui/miniImage";
 import { MiniBox, MiniBoxProps } from "../basic-ui/miniBox";
 import { MiniUiType } from "../miniComponentConfig";
+import { MiniImage, MiniImageProps } from "../basic-ui";
 
 interface MiniImageInsideCard extends MiniImageProps {
   children?: ReactNode;
@@ -17,11 +17,11 @@ const uiStyle = {
   [MiniUiType.NONE]: "",
 };
 
-export function MiniImageInsideCard({
+export const MiniImageInsideCard = ({
   children,
   childClassName = "",
   ...props
-}: MiniImageInsideCard) {
+}: MiniImageInsideCard) => {
   const baseStyle = "relative group flex flex-col";
 
   return (

@@ -27,13 +27,13 @@ interface MiniRadiaChartProp extends PolarChartProps {
   matchData?: MiniMatchType[];
 }
 
-export default function MiniRadiaChart({
+export const MiniRadiaChart = ({
   label,
   width = 150,
   height = 150,
   matchData = [{ name: "적합도", value: 50, fill: "var(--brand)" }],
   ...props
-}: MiniRadiaChartProp) {
+}: MiniRadiaChartProp) => {
   const value = matchData[0]?.value ?? 0;
 
   return (
@@ -55,4 +55,4 @@ export default function MiniRadiaChart({
       <p className="text-2xl text-[var(--text-light)] mt-[-10px]">{value}%</p>
     </div>
   );
-}
+};

@@ -9,7 +9,7 @@ export interface MiniImageProps
   viewport?: ViewportOptions;
 }
 
-export default function MiniImage({
+export const MiniImage = ({
   className = "",
   uiMotion,
   uiHover,
@@ -17,7 +17,7 @@ export default function MiniImage({
   ui,
   viewport = defaultViewport,
   ...props
-}: MiniImageProps) {
+}: MiniImageProps) => {
   return (
     <MiniBox
       uiMotion={uiMotion}
@@ -28,4 +28,4 @@ export default function MiniImage({
       <img className={`w-full h-full object-cover`} {...props} />
     </MiniBox>
   );
-}
+};

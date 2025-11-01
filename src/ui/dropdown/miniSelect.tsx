@@ -14,12 +14,12 @@ interface MiniDropdownListProps {
   className?: string;
 }
 
-export default function MiniSelect({
+export const MiniSelect = ({
   isOpen,
   options,
   onSelect,
   className = "",
-}: MiniDropdownListProps) {
+}: MiniDropdownListProps) => {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -53,4 +53,4 @@ export default function MiniSelect({
       )}
     </AnimatePresence>
   );
-}
+};

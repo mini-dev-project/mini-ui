@@ -28,7 +28,7 @@ const uiSizeStyle = {
   [MiniUiSize.NONE]: "",
 };
 
-export default function MiniTextarea({
+export const MiniTextarea = ({
   label,
   className,
 
@@ -38,7 +38,7 @@ export default function MiniTextarea({
   uiMotion: motion,
   viewport = defaultViewport,
   ...props
-}: InputProps) {
+}: InputProps) => {
   const animation: Variants = mergeVariants(motion, hover);
   const baseStyle = "";
 
@@ -60,4 +60,4 @@ export default function MiniTextarea({
       />
     </div>
   );
-}
+};

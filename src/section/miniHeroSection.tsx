@@ -1,4 +1,4 @@
-import MiniCarousel, { CarouselImageType } from "../ui/miniCarousel";
+import { CarouselImageType, MiniCarousel } from "../ui";
 
 interface MiniHeroSectionProps {
   className?: string;
@@ -7,12 +7,12 @@ interface MiniHeroSectionProps {
   image?: string[];
 }
 
-export default function MiniHeroSection({
+export const MiniHeroSection = ({
   className = "",
   children,
   video,
   image,
-}: MiniHeroSectionProps) {
+}: MiniHeroSectionProps) => {
   if (image && image.length > 1) {
     const imageData: CarouselImageType[] = image.map((imgSrc) => ({
       image: imgSrc,
@@ -43,4 +43,4 @@ export default function MiniHeroSection({
   }
 
   return;
-}
+};

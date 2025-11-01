@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 export interface CarouselImageType {
   children?: React.ReactNode;
@@ -15,7 +15,7 @@ interface CarouselProps {
   className?: string;
 }
 
-export default function MiniCarousel({ images, className }: CarouselProps) {
+export const MiniCarousel = ({ images, className }: CarouselProps) => {
   const [index, setIndex] = useState(0);
 
   const next = () => setIndex((prev) => (prev + 1) % images.length);
@@ -59,11 +59,11 @@ export default function MiniCarousel({ images, className }: CarouselProps) {
           <div
             key={i}
             className={`w-3 h-3 rounded-full ${
-              i === index ? 'bg-white' : 'bg-white/40'
+              i === index ? "bg-white" : "bg-white/40"
             } transition-all duration-300`}
           />
         ))}
       </div>
     </div>
   );
-}
+};

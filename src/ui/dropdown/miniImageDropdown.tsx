@@ -1,9 +1,13 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import MiniSelect, { OptionType } from "./miniSelect";
-import { MiniComponetType, MiniUiSize, MiniUiType } from "../../miniComponentConfig";
-import MiniImage from "../../basic-ui/miniImage";
+import {
+  MiniComponetType,
+  MiniUiSize,
+  MiniUiType,
+} from "../../miniComponentConfig";
+import { MiniImage } from "../../basic-ui";
+import { MiniSelect, OptionType } from "./miniSelect";
 
 // === MiniDropdown Props ===
 interface MiniDropdownProps
@@ -25,7 +29,7 @@ const uiStyle = {
 };
 
 // === 컴포넌트 ===
-export default function MiniImageDropdown({
+export const MiniImageDropdown = ({
   options,
   image,
   onValueSelect,
@@ -35,7 +39,7 @@ export default function MiniImageDropdown({
   uiMotion,
   uiHover,
   ...props
-}: MiniDropdownProps) {
+}: MiniDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState<string>("");
   const ref = useRef<HTMLDivElement>(null);
@@ -68,4 +72,4 @@ export default function MiniImageDropdown({
       <MiniSelect isOpen={isOpen} options={options} onSelect={handleSelect} />
     </div>
   );
-}
+};

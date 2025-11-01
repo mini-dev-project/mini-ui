@@ -2,10 +2,9 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import MiniSelect, { OptionType } from "./miniSelect";
 import { MiniUiType } from "../../miniComponentConfig";
-import { ButtonProps } from "../../basic-ui";
-import MiniButton from "../../basic-ui/miniButton";
+import { ButtonProps, MiniButton } from "../../basic-ui";
+import { MiniSelect, OptionType } from "./miniSelect";
 
 // === MiniDropdown Props ===
 interface MiniDropdownProps extends ButtonProps {
@@ -26,14 +25,14 @@ const uiStyle = {
 };
 
 // === 컴포넌트 ===
-export default function MiniDropdown({
+export const MiniDropdown = ({
   label,
   options,
   placeholder = "선택하세요",
   className = "",
   onValueSelect,
   ...props
-}: MiniDropdownProps) {
+}: MiniDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState<string>("");
   const ref = useRef<HTMLDivElement>(null);

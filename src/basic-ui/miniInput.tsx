@@ -28,7 +28,7 @@ const uiSizeStyle = {
   [MiniUiSize.NONE]: "",
 };
 
-export default function MiniInput({
+export const MiniInput = ({
   label,
   className,
 
@@ -38,7 +38,7 @@ export default function MiniInput({
   uiMotion: motion,
   viewport = defaultViewport,
   ...props
-}: InputProps) {
+}: InputProps) => {
   const animation: Variants = mergeVariants(motion, hover);
   const baseStyle = "";
 
