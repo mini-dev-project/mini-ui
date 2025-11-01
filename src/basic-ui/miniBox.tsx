@@ -28,7 +28,7 @@ const uiSizeStyle = {
   [MiniUiSize.NONE]: "",
 };
 
-export default function MiniBox({
+export const MiniBox({
   children,
   className = "",
   ui = MiniUiType.NONE,
@@ -38,7 +38,7 @@ export default function MiniBox({
   uiMotion,
   viewport = defaultViewport,
   ...props
-}: MiniBoxProps) {
+}: MiniBoxProps) => {
   const animation: Variants = mergeVariants(uiMotion, uiHover);
   const baseStyle = `${uiSizeStyle[uiSize]} ${uiStyle[ui]}`;
 
