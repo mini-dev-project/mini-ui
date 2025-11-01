@@ -28,7 +28,7 @@ const uiSizeStyle = {
   [MiniUiSize.NONE]: "",
 };
 
-export const MiniBox({
+export const MiniBox = ({
   children,
   className = "",
   ui = MiniUiType.NONE,
