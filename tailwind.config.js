@@ -1,6 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
-  safelist: [{ pattern: /.*/ }], // ✅ 모든 유틸리티 포함
+  content: ["./src/**/*.{js,ts,jsx,tsx}"], // 내부 개발용
   theme: { extend: {} },
   plugins: [],
 };
