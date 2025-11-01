@@ -1,4 +1,4 @@
-import { ViewportOptions } from "framer-motion";
+import { ViewportOptions } from "../miniComponentConfig";
 
 export const defaultViewport: ViewportOptions = {
   once: true,

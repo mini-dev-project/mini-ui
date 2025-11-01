@@ -1,4 +1,10 @@
-import { Variants } from "framer-motion";
+export type Variants = Record<string, any>;
+
+export type ViewportOptions = {
+  once?: boolean;
+  amount?: "some" | "all" | number;
+  margin?: string;
+};
 
 export interface MiniComponetType {
   ui?: MiniUiType;

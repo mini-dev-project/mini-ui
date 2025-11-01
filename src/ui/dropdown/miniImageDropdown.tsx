@@ -1,15 +1,9 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { motion, Variants } from "framer-motion";
-import {
-  mergeVariants,
-  MiniComponetType,
-  MiniUiSize,
-  MiniUiType,
-} from "../../../miniComponentConfig";
 import MiniSelect, { OptionType } from "./miniSelect";
-import MiniImage from "@/mini-components/basic-ui/miniImage";
+import { MiniComponetType, MiniUiSize, MiniUiType } from "../../miniComponentConfig";
+import MiniImage from "../../basic-ui/miniImage";
 
 // === MiniDropdown Props ===
 interface MiniDropdownProps

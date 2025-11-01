@@ -1,5 +1,4 @@
-import { ViewportOptions } from "framer-motion";
-import { MiniComponetType } from "../miniComponentConfig";
+import { MiniComponetType, ViewportOptions } from "../miniComponentConfig";
 import { defaultViewport } from "../animation/miniViewPort";
 import MiniBox from "./miniBox";
 import React from "react";

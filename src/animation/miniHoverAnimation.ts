@@ -1,7 +1,7 @@
 // miniHoverMotion.ts
 // hover 시 scale, rotate, brightness 등 시각적 강조 효과 세트
 
-import { Variants } from "framer-motion";
+import { Variants } from "../miniComponentConfig";
 
 /** 살짝 커지는 효과 */
 export const hoverScale = (

@@ -1,13 +1,19 @@
 "use client";
 
 import { RadialBar, RadialBarChart, ResponsiveContainer } from "recharts";
-import { PolarChartProps } from "recharts/types/util/types";
 
-interface MiniRadiaChartProp extends PolarChartProps {
-  label: string;
+export interface PolarChartProps {
   width?: number;
   height?: number;
-  matchData: MiniMatchType[];
+  cx?: number | string;
+  cy?: number | string;
+  innerRadius?: number | string;
+  outerRadius?: number | string;
+  barSize?: number;
+  startAngle?: number;
+  endAngle?: number;
+  data?: any[];
+  className?: string;
 }
 
 export interface MiniMatchType {
@@ -15,6 +21,12 @@ export interface MiniMatchType {
   value: number;
   fill: string;
 }
+
+interface MiniRadiaChartProp extends PolarChartProps {
+  label: string;
+  matchData?: MiniMatchType[];
+}
+
 export default function MiniRadiaChart({
   label,
   width = 150,
@@ -22,19 +34,25 @@ export default function MiniRadiaChart({
   matchData = [{ name: "적합도", value: 50, fill: "var(--brand)" }],
   ...props
 }: MiniRadiaChartProp) {
+  const value = matchData[0]?.value ?? 0;
+
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <h4 className="text-lg font-semibold mb-2">{label}</h4>
       <ResponsiveContainer width={width} height={height}>
         <RadialBarChart
           data={matchData}
-          startAngle={(matchData[0].value / 100) * 360}
+          startAngle={(value / 100) * 360}
+          endAngle={0}
+          innerRadius="60%"
+          outerRadius="100%"
+          barSize={12}
           {...props}
         >
           <RadialBar dataKey="value" cornerRadius={8} />
         </RadialBarChart>
       </ResponsiveContainer>
-      <p className="text-2xl text-[var(--text-light)]">{matchData[0].value}%</p>
+      <p className="text-2xl text-[var(--text-light)] mt-[-10px]">{value}%</p>
     </div>
   );
 }

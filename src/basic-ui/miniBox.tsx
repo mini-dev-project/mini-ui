@@ -1,11 +1,12 @@
 "use client";
 
-import { motion as fk, HTMLMotionProps, Variants } from "framer-motion";
+import { motion as fk, HTMLMotionProps } from "framer-motion";
 import {
   mergeVariants,
   MiniComponetType,
   MiniUiSize,
   MiniUiType,
+  Variants,
 } from "../miniComponentConfig";
 import { defaultViewport } from "../animation/miniViewPort";
 

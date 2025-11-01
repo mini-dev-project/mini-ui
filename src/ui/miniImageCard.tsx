@@ -1,9 +1,9 @@
 "use client";
 
-import { MiniUiType } from "../../miniComponentConfig";
 import { ReactNode } from "react";
 import MiniImage, { MiniImageProps } from "../basic-ui/miniImage";
 import MiniBox, { MiniBoxProps } from "../basic-ui/miniBox";
+import { MiniUiType } from "../miniComponentConfig";
 
 interface MiniImageInsideCard extends MiniImageProps {
   children?: ReactNode;
