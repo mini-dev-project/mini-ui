@@ -1,4 +1,9 @@
-export * as animation from "./animation/index";
-export * as basicUi from "./basic-ui/index";
-export * as section from "./section/index";
-export * as ui from "./animation/index";
+export * as animation from "./animation";
+export * as basicUi from "./basic-ui";
+export * as section from "./section";
+export * as ui from "./ui";
+
+export * from "./animation";
+export * from "./basic-ui";
+export * from "./section";
+export * from "./ui";
