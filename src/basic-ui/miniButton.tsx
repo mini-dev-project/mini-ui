@@ -40,7 +40,6 @@ export const MiniButton = ({
   ...props
 }: ButtonProps) => {
   const animation: Variants = mergeVariants(uiMotion, uiHover);
-  const baseStyle = `${uiSizeStyle[uiSize]} ${uiStyle[ui]} font-semibold`;
 
   return (
     <fk.button
@@ -49,7 +48,7 @@ export const MiniButton = ({
       whileHover={animation ? "whileHover" : undefined}
       whileInView={animation ? "visible" : undefined}
       viewport={viewport}
-      className={`${baseStyle} ${className}`}
+      className={`${uiSizeStyle[uiSize]} ${uiStyle[ui]} ${className}`}
       {...props}
     >
       {children}

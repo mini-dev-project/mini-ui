@@ -38,7 +38,6 @@ export const MiniBox = ({
   ...props
 }: MiniBoxProps) => {
   const animation: Variants = mergeVariants(uiMotion, uiHover);
-  const baseStyle = `${uiSizeStyle[uiSize]} ${uiStyle[ui]}`;
 
   return (
     <fk.div
@@ -47,10 +46,10 @@ export const MiniBox = ({
       whileHover={animation ? "whileHover" : undefined}
       whileInView={animation ? "visible" : undefined}
       viewport={viewport}
-      className={`${baseStyle} ${className}`}
+      className={`${uiSizeStyle[uiSize]} ${uiStyle[ui]} ${className}`}
       {...props}
     >
       {children}
     </fk.div>
   );
-}
+};

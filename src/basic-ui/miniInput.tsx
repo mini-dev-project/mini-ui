@@ -38,7 +38,6 @@ export const MiniInput = ({
   ...props
 }: InputProps) => {
   const animation: Variants = mergeVariants(motion, hover);
-  const baseStyle = "";
 
   return (
     <div>
@@ -53,7 +52,7 @@ export const MiniInput = ({
         whileHover={animation ? "whileHover" : undefined}
         whileInView={animation ? "visible" : undefined}
         viewport={viewport}
-        className={`${baseStyle} ${uiStyle[ui]} ${uiSizeStyle[uiSize]} ${className}`}
+        className={`${uiStyle[ui]} ${uiSizeStyle[uiSize]} ${className}`}
         {...props}
       />
     </div>
