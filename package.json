@@ -10,8 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.tsx --dts --format esm,cjs && npm run build:css",
-    "build:css": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --minify"
+    "build": "tsup src/index.tsx --dts --format esm,cjs"
   },
   "dependencies": {},
   "peerDependencies": {
