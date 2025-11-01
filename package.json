@@ -1,6 +1,6 @@
 {
   "name": "ministudio-ui",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Reusable React components for Mini Studio",
   "type": "module",
   "main": "dist/index.js",
