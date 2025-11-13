@@ -5,7 +5,7 @@ import {
   MiniUiType,
 } from "../../miniComponentConfig";
 import { MiniImage } from "../../basic-ui";
-import { MiniSelect, OptionType } from "./miniSelect";
+import { MiniSelect, MiniOptionType } from "./miniSelect";
 
 // === MiniDropdown Props ===
 interface MiniDropdownProps
@@ -14,7 +14,7 @@ interface MiniDropdownProps
   label?: string;
   image: string;
 
-  options: OptionType[];
+  options: MiniOptionType[];
   onValueSelect?: (value: string) => void;
 }
 

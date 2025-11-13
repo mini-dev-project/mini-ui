@@ -8,7 +8,7 @@ import {
 } from "../miniComponentConfig";
 import { defaultViewport } from "../animation/miniViewPort";
 
-interface InputProps extends HTMLMotionProps<"input">, MiniComponetType {
+interface MiniInputProps extends HTMLMotionProps<"input">, MiniComponetType {
   label?: string;
 }
 
@@ -36,7 +36,7 @@ export const MiniInput = ({
   uiMotion: motion,
   viewport = defaultViewport,
   ...props
-}: InputProps) => {
+}: MiniInputProps) => {
   const animation: Variants = mergeVariants(motion, hover);
 
   return (

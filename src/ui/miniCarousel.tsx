@@ -2,18 +2,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
-export interface CarouselImageType {
+export interface MiniCarouselImageType {
   children?: React.ReactNode;
   className?: string;
   image: string;
 }
 
-interface CarouselProps {
-  images: CarouselImageType[];
+export interface MiniCarouselProps {
+  images: MiniCarouselImageType[];
   className?: string;
 }
 
-export const MiniCarousel = ({ images, className }: CarouselProps) => {
+export const MiniCarousel = ({ images, className }: MiniCarouselProps) => {
   const [index, setIndex] = useState(0);
 
   const next = () => setIndex((prev) => (prev + 1) % images.length);

@@ -1,13 +1,13 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { MiniUiType } from "../../miniComponentConfig";
-import { ButtonProps, MiniButton } from "../../basic-ui";
-import { MiniSelect, OptionType } from "./miniSelect";
+import { MiniButtonProps, MiniButton } from "../../basic-ui";
+import { MiniSelect, MiniOptionType } from "./miniSelect";
 
 // === MiniDropdown Props ===
-interface MiniDropdownProps extends ButtonProps {
+interface MiniDropdownProps extends MiniButtonProps {
   className?: string;
-  options: OptionType[];
+  options: MiniOptionType[];
   placeholder?: string;
   label?: string;
 

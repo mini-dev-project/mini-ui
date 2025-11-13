@@ -8,7 +8,7 @@ import {
 } from "../miniComponentConfig";
 import { defaultViewport } from "../animation/miniViewPort";
 
-interface InputProps extends HTMLMotionProps<"textarea">, MiniComponetType {
+interface MiniTextareaProps extends HTMLMotionProps<"textarea">, MiniComponetType {
   label?: string;
 }
 
@@ -36,7 +36,7 @@ export const MiniTextarea = ({
   uiMotion: motion,
   viewport = defaultViewport,
   ...props
-}: InputProps) => {
+}: MiniTextareaProps) => {
   const animation: Variants = mergeVariants(motion, hover);
 
   return (

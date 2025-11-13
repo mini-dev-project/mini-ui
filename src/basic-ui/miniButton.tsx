@@ -8,7 +8,7 @@ import {
 } from "../miniComponentConfig";
 import { defaultViewport } from "../animation/miniViewPort";
 
-export interface ButtonProps
+export interface MiniButtonProps
   extends HTMLMotionProps<"button">,
     MiniComponetType {
   children?: React.ReactNode;
@@ -38,7 +38,7 @@ export const MiniButton = ({
   uiHover,
   viewport = defaultViewport,
   ...props
-}: ButtonProps) => {
+}: MiniButtonProps) => {
   const animation: Variants = mergeVariants(uiMotion, uiHover);
 
   return (

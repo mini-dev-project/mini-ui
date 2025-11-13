@@ -1,13 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
 
-export interface OptionType {
+export interface MiniOptionType {
   value: string;
   label: string;
 }
 
-interface MiniDropdownListProps {
+export interface MiniDropdownListProps {
   isOpen: boolean;
-  options: OptionType[];
+  options: MiniOptionType[];
   onSelect: (value: string) => void;
   className?: string;
 }

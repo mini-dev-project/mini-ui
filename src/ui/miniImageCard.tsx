@@ -3,7 +3,7 @@ import { MiniBox, MiniBoxProps } from "../basic-ui/miniBox";
 import { MiniUiType } from "../miniComponentConfig";
 import { MiniImage, MiniImageProps } from "../basic-ui";
 
-interface MiniImageInsideCard extends MiniImageProps {
+export interface MiniImageInsideCard extends MiniImageProps {
   children?: ReactNode;
   childClassName?: string;
 }
