@@ -1,6 +1,6 @@
 {
   "name": "ministudio-ui",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "Reusable React components and CLI tools for Mini Studio",
   "type": "module",
   "main": "dist/index.js",
